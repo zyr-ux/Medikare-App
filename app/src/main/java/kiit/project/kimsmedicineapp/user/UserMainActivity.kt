@@ -336,7 +336,7 @@ class UserMainActivity : AppCompatActivity()
             if (view is TextInputEditText) {
                 val outRect = android.graphics.Rect()
                 view.getGlobalVisibleRect(outRect)
-                if (!outRect.contains(ev.rawX.toInt(), ev.rawY.toInt())) // trying the make the date picker not lose focus doesnt work but the logic works for any other edit text
+                if (!outRect.contains(ev.rawX.toInt(), ev.rawY.toInt())) // trying to the make the date picker not lose focus doesnt work but the logic works for any other edit text
                 {
                     // Clear focus and hide the keyboard
                     view.clearFocus()
