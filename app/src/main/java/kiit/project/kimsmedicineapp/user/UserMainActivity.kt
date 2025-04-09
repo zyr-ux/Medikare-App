@@ -144,8 +144,6 @@ class UserMainActivity : AppCompatActivity()
                         intent.putExtra("ID",id)
                         startActivity(intent)
                     }
-
-
                 }
                 else
                 {
@@ -323,8 +321,6 @@ class UserMainActivity : AppCompatActivity()
         }
         return Uri.parse(file.absolutePath)
     }
-
-
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean
     {
