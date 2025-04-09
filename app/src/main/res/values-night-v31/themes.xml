@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.Medikare" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+        <!-- No color overrides - system will use dynamic colors -->
+        <!-- Add any non-color theme attributes here if needed -->
+    </style>
+</resources>

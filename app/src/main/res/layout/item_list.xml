@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardBackgroundColor="?attr/colorSurfaceBright"
+    android:foreground="?selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!--Date and expand button -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="1dp">
+
+            <!-- Date TextView -->
+            <TextView
+                android:id="@+id/tvDate"
+                style="@style/TextAppearance.Material3.TitleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:drawablePadding="8dp"
+                android:drawableTint="?attr/colorOnSurfaceVariant"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                tools:text="March 30, 2025"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnExpand"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- Expand Button -->
+            <ImageView
+                android:id="@+id/btnExpand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_keyboard_arrow_down_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:scaleType="center"
+                android:contentDescription="Expand"
+                app:tint="?attr/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!-- Patient & Doctor Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:divider="@drawable/divider_horizontal"
+        android:showDividers="middle">
+
+        <!-- Patient Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_patient"
+            app:tint="?attr/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tvPatientName"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnSurface"
+                tools:text="Patient: John Doe"/>
+        </LinearLayout>
+
+        <!-- Doctor Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_doctor"
+            app:tint="?attr/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tvDoctorName"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnSurface"
+                tools:text="Doctor: Dr. Smith"/>
+        </LinearLayout>
+
+    </LinearLayout>
+        <!-- Expandable Content (Initially Hidden) -->
+        <LinearLayout
+            android:id="@+id/expandableSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+                <TableLayout
+                    android:id="@+id/medTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/table_background"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:padding="8dp"
+                    android:showDividers="middle"
+                    android:stretchColumns="*"
+                    />
+            <TextView
+                android:id="@+id/tvAdditionalInfo"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                tools:text="Additional prescription details will be shown here."
+                android:textIsSelectable="true"/>
+
+
+        </LinearLayout>
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
