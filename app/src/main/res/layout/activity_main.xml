@@ -36,7 +36,7 @@
                 android:textSize="17sp"
                 android:layout_toStartOf="@id/iconOCR"
                 android:background="@drawable/search_bar_background"
-                android:hint="Enter Patient ID"
+                android:hint="Enter Prescription ID"
                 android:padding="12dp" />
 
             <ImageButton
