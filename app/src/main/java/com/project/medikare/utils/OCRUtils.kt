@@ -24,7 +24,7 @@ object OCRUtils {
             .build()
 
         val request = Request.Builder()
-            .url("http://192.46.209.105/id")
+            .url("http://3.108.47.62:5000/id")
             .post(requestBody)
             .build()
 
@@ -67,7 +67,7 @@ object OCRUtils {
             .build()
 
         val request = Request.Builder()
-            .url("http://192.46.209.105/medi")
+            .url("http://3.108.47.62:5000/medi")
             .post(requestBody)
             .build()
 
